@@ -7,12 +7,13 @@ const StyledHeader = styled.header`
     h1 {
         margin-top: 0px;
         margin-bottom: 0px;
+        text-align: center;
     }
 `;
 
 const Header = () => {
     return <StyledHeader>
-    <h1><img src={logo} width="100px" alt="MacMillan"/>Checklist Questions</h1>
+    <img src={logo} width="100px" alt="MacMillan"/><h1>Checklist Questions</h1>
     </StyledHeader>
 }
 
