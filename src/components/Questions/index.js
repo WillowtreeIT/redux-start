@@ -6,6 +6,7 @@ const QuestionList = styled.div`
     font-size: 15pt;
     padding-top: 20px;
     padding-bottom: 20px;
+    color:green;
 `;
 
 const questions = [

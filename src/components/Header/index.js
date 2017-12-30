@@ -9,7 +9,7 @@ const StyledHeader = styled.header`
         margin-bottom: 0px;
         text-align: center;
     }
-`;
+`       
 
 const Header = () => {
     return <StyledHeader>
