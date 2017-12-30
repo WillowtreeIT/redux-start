@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import Header from './Header';
 import NavBar from './NavBar';
 import Questions from './Questions/';
+import Survey from './Survey';
 import Footer from './Footer';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
@@ -10,9 +11,8 @@ const Main = styled.main`
     background-color: WhiteSmoke;
 `;
 
-const Container = () => {
+const QuestionPage = () => {
     return <div>
-    <Header />
     <NavBar />
     <Main>
         <Questions />    
@@ -20,9 +20,8 @@ const Container = () => {
     </div>;
 };
 
-const Symptoms = () => {
+const SymptomPage = () => {
     return <div>
-    <Header />
     <NavBar />
     <Main>
     <p>Symptoms data here</p>    
@@ -30,11 +29,23 @@ const Symptoms = () => {
     </div>;
 };
 
+const SurveyPage = () => {
+   return <div>
+    <NavBar />
+    <Main>
+    <Survey />   
+    </Main>
+    </div>;
+}
+
+
 const MyApp = () => {
         return <Router>
         <div>
-        <Route exact path="/" component={Container}/>
-        <Route path="/symptoms" component={Symptoms}/>
+        <Header />
+        <Route path="/questions" component={QuestionPage}/>
+        <Route path="/symptoms" component={SymptomPage}/>
+        <Route path="/survey" component={SurveyPage}/>
         <Footer />
         </div>
         </Router>;

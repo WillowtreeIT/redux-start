@@ -32,8 +32,8 @@ const items = [
 ];
 
 const Footer = () => {
-    const list = items.map( (item) =>
-    <div className="col">
+    const list = items.map( (item, index) =>
+    <div key={index} className="col">
     <a href={item.link}>{item.text}</a>
     </div>
     );

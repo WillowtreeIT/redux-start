@@ -16,7 +16,7 @@ const StyledQuestion = styled.div`
 `
         
 const Question = (props) => {
-    return  <StyledQuestion>{props.q}<Icon name="caret-right" />
+    return  <StyledQuestion key={props.key} >{props.q}<Icon name="caret-right" />
     </StyledQuestion>
 }
 

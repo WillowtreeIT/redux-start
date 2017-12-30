@@ -19,7 +19,7 @@ const questions = [
         
 const Questions = () => {
     
-    const list = questions.map( (q) => <Question q={q} /> );
+    const list = questions.map( (q, index) => <Question key={index} q={q} /> );
     return  <QuestionList>
     {list}
   </QuestionList>;
