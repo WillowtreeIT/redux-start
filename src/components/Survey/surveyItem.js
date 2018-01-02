@@ -49,10 +49,10 @@ const SurveyItem = (props) => {
         <div key={index}>
             <div className="question">- {subq.text}</div>
             <div className="answers">
-                <label htmlFor={myId + 'y'}>Yes</label>
-                <input id={myId + 'y'} name={myId} type="radio" value="yes" />
-                <label htmlFor={myId + 'n'}>No</label>
-                <input id={myId + 'n'} name={myId} type="radio" value="no" />
+                <label htmlFor={myId + 'y-' + index}>Yes</label>
+                <input id={myId + 'y-' + index } name={myId + '-' + index} type="radio" value="yes" />
+                <label htmlFor={myId + 'n-' + index}>No</label>
+                <input id={myId + 'n-' + index} name={myId + '-' + index} type="radio" value="no" />
             </div>
         </div>            
         )

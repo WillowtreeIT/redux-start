@@ -9,6 +9,8 @@ import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 const Main = styled.main`
     background-color: WhiteSmoke;
+    padding-top: 10px;
+    padding-bottom: 10px;
     min-height: 300px;
 `;
 
@@ -64,7 +66,7 @@ const MyApp = () => {
             <Route path="/dashboard" render={props => ( <DefaultPage header="Dashboard"/> )}/>
             <Route path="/survey" component={SurveyPage} />
             <Route path="/network" render={props => ( <DefaultPage header="Network"/> )}/>
-            <Route component={DefaultPage} render={props => ( <DefaultPage header="Home"/> )}/>
+            <Route render={props => ( <DefaultPage header="Home"/> )}/>
             </Switch>
             <Footer />
         </div>
