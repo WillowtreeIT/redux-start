@@ -34,9 +34,9 @@ const SurveyItem = (props) => {
             {q.text}
         </div>
         <div className="answers">
-            <label for={myId + 'y'}>Yes</label>
+            <label htmlFor={myId + 'y'}>Yes</label>
             <input id={myId + 'y'} name={myId} type="radio" value="yes" />
-            <label for={myId + 'n'}>No</label>
+            <label htmlFor={myId + 'n'}>No</label>
             <input id={myId + 'n'} name={myId} type="radio" value="no" />
         </div>
         {q.detail? <div className="detail">
@@ -45,13 +45,13 @@ const SurveyItem = (props) => {
         </StyledItem>;
     }
     
-    const queryList =  q.queries.map( (subq) => (
-        <div>
+    const queryList =  q.queries.map( (subq, index) => (
+        <div key={index}>
             <div className="question">- {subq.text}</div>
             <div className="answers">
-                <label for={myId + 'y'}>Yes</label>
+                <label htmlFor={myId + 'y'}>Yes</label>
                 <input id={myId + 'y'} name={myId} type="radio" value="yes" />
-                <label for={myId + 'n'}>No</label>
+                <label htmlFor={myId + 'n'}>No</label>
                 <input id={myId + 'n'} name={myId} type="radio" value="no" />
             </div>
         </div>            

@@ -10,10 +10,16 @@ const StyledHeader = styled.header`
         text-align: center;
     }
 `       
-
-const Header = () => {
+const Header = (props) => {
     return <StyledHeader>
-    <img src={logo} width="100px" alt="MacMillan"/><h1>Checklist Questions</h1>
+    <table>
+    <tbody>
+        <tr>
+            <td><img src={logo} width="100px" alt="MacMillan"/></td>
+            <td><h1>{props.header}</h1></td>
+        </tr>
+    </tbody>
+    </table>
     </StyledHeader>
 }
 

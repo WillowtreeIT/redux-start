@@ -12,7 +12,9 @@ module.exports = {
   plugins: [
     //simplifies creation of HTML files to serve your webpack bundles. This is especially useful for webpack bundles that include a hash in the filename which changes every compilation. You can either let the plugin generate an HTML file for you, supply your own template using lodash templates or use your own loader.
     new HtmlWebpackPlugin({
-      title: 'Hot Module Replacement'
+      title: 'MacMillan Survey Tool',
+      favicon: 'src/assets/favicon.ico',
+      template: 'index.html'
     }),
     //Auto replacement of page when i save some file, even css
     new webpack.HotModuleReplacementPlugin()

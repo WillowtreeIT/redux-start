@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 const StyledFooter = styled.footer`
@@ -34,7 +35,7 @@ const items = [
 const Footer = () => {
     const list = items.map( (item, index) =>
     <div key={index} className="col">
-    <a href={item.link}>{item.text}</a>
+    <Link to={item.link}>{item.text}</Link>
     </div>
     );
     
